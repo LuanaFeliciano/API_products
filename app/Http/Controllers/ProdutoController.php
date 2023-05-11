@@ -49,4 +49,26 @@ class ProdutoController extends Controller
             ], 201);
         }
     }
+
+    public function updateProduct($id, Request $request)
+    {
+        $produto = Produto::find($id);
+        $produto->update($request->all());
+        $produto_show = DB::select('select * from produtos where produto = ?', [$id]);  
+
+        if (empty($produto_show)) {
+            return response()->json(array(
+                'code' => 404,
+                'message' => 'ID not found or invalid'
+            ), 404);
+        } else {
+            $i = count($produto_show);
+            if ($i == 1) {
+                return response()->json(array(
+                    'code' => 200,
+                    'data' => $produto
+                ), 200);
+            }
+        }
+    }
 }
