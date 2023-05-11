@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Produto extends Model
 {
-    protected $table = 'produto';
     protected $primaryKey = 'produto';
-    public $timestamps = false;
 
-    protected $fillable = [
-        'produto','referencia', 'descricao', 'garantia', 'ativo', 'data_input', 'fabrica'
-    ];
+    public function fabrica()
+    {
+        return $this->belongsTo('App\Models\Fabrica');
+    }
+
+    protected $fillable = ['produto','referencia', 'descricao', 'garantia', 'ativo', 'fabrica_id'];
 }
