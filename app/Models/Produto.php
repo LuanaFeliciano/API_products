@@ -13,5 +13,5 @@ class Produto extends Model
         return $this->belongsTo('App\Models\Fabrica');
     }
 
-    protected $fillable = ['produto','referencia', 'descricao', 'garantia', 'ativo', 'fabrica_id'];
+    protected $fillable = ['produto', 'referencia', 'descricao', 'garantia', 'ativo', 'fabrica_id'];
 }

@@ -16,7 +16,7 @@ class FabricaSeeder extends Seeder
     {
         $faker = Factory::create();
 
-        for($i=0;$i<20;$i++){
+        for ($i = 0; $i < 20; $i++) {
             DB::table('fabricas')->insert([
                 'nome' => $faker->company(),
             ]);

@@ -18,11 +18,11 @@ class ProdutoSeeder extends Seeder
         $faker = Factory::create();
         $fabrica = Fabrica::all()->pluck('fabrica')->toArray();
 
-        for($i=0;$i<20;$i++){
+        for ($i = 0; $i < 20; $i++) {
             DB::table('produtos')->insert([
                 'referencia' => rand(1000000000, 9999999999),
                 'descricao' => $faker->text(50),
-                'garantia'=>rand(1,100),
+                'garantia' => rand(1, 100),
                 'ativo' => $faker->boolean(),
                 'fabrica_id' => $faker->randomElement($fabrica),
             ]);

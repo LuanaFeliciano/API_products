@@ -54,7 +54,7 @@ class ProdutoController extends Controller
     {
         $produto = Produto::find($id);
         $produto->update($request->all());
-        $produto_show = DB::select('select * from produtos where produto = ?', [$id]);  
+        $produto_show = DB::select('select * from produtos where produto = ?', [$id]);
 
         if (empty($produto_show)) {
             return response()->json(array(
@@ -75,7 +75,7 @@ class ProdutoController extends Controller
     public function deleteProduct($id)
     {
         $produto = Produto::find($id);
-    
+
         if (!$produto) {
             return response()->json(array(
                 'code' => 404,
@@ -83,7 +83,7 @@ class ProdutoController extends Controller
             ), 404);
         } else {
             $produto->delete();
-    
+
             return response()->json(array(
                 'message' => "Produto deletado",
                 'code' => 200,
@@ -91,5 +91,4 @@ class ProdutoController extends Controller
             ), 200);
         }
     }
-    
 }
