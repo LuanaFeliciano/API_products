@@ -71,4 +71,25 @@ class ProdutoController extends Controller
             }
         }
     }
+
+    public function deleteProduct($id)
+    {
+        $produto = Produto::find($id);
+    
+        if (!$produto) {
+            return response()->json(array(
+                'code' => 404,
+                'message' => 'ID not found or invalid'
+            ), 404);
+        } else {
+            $produto->delete();
+    
+            return response()->json(array(
+                'message' => "Produto deletado",
+                'code' => 200,
+                'data' => $produto
+            ), 200);
+        }
+    }
+    
 }
