@@ -1,26 +1,25 @@
-# Lumen PHP Framework
+# <img width="150px" height="100px" align="right" src="https://github.com/LuanaFeliciano/API_products/assets/98564118/dd88def7-134a-4985-b8b0-58c2f9ce928c">  <h1 align="center"> API com Lumen </h1>
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
+API CRUD de produtos desenvolvida com o micro framework Lumen baseado
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-> **Note:** In the years since releasing Lumen, PHP has made a variety of wonderful performance improvements. For this reason, along with the availability of [Laravel Octane](https://laravel.com/docs/octane), we no longer recommend that you begin new projects with Lumen. Instead, we recommend always beginning new projects with [Laravel](https://laravel.com).
+## 👩🏽‍💻 Tecnologias
+- PostgreSQL
+ * [Lumen](https://lumen.laravel.com/docs): Micro-framework voltado para o desenvolvimento de microserviços e API's Restful
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+## 💻 Endpoints
+- GET /produto retornará todos os produtos.
+- GET /produto/{id} retornará um registro de produto fazendo referência a seu id.
+- POST /produto criará um novo registro de produto.
+- PUT /produto/{id} atualizará um registro existente de produto.
+- DELETE /produto/{id} excluirá um registro de produto fazendo referência a seu id.
 
-## Contributing
+## Bibliotecas ou Pacotes utilizados:
+- https://github.com/flipboxstudio/lumen-generator - Para usar comandos geradores como no Laravel
+- https://github.com/fzaninotto/Faker - Para gerar dados falsos. Foi usado para popular o banco de dados.
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Descomentar:
+Descomente no bootstrap/app.php
+- $app->withFacades();  permite o uso de recursos do Laravel de maneira mais fácil
+- $app->withEloquent(); - permite definir e manipular modelos de banco de dados, criar consultas e relacionamentos
