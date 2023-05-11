@@ -1,6 +1,6 @@
 # <img width="150px" height="150px" align="right" src="https://github.com/LuanaFeliciano/API_products/assets/98564118/37386e46-cca1-4996-ba17-cbefbdfd0b92">  <h1 align="center"> API com Lumen </h1>
 
-API CRUD de produtos desenvolvida com o micro framework Lumen baseado
+API CRUD de produtos desenvolvida com o micro framework Lumen
 
 
 ## 👩🏽‍💻 Tecnologias
