@@ -9,8 +9,8 @@ API CRUD de produtos desenvolvida com o micro framework Lumen
 
 
 ## 💻 Endpoints
-- GET /produtos retornará todos os produtos.
-- GET /produto/{id} retornará um registro de produto fazendo referência a seu id.
+- GET /produtos = retornará todos os produtos.
+- GET /produto/{id} = retornará um registro de produto fazendo referência a seu id.
 - POST /produto/cadastrar = criará um novo registro de produto.
 - PUT /produto/{id}/atualizar = atualizará um registro existente de produto.
 - DELETE /produto/{id}/deletar = excluirá um registro de produto fazendo referência a seu id.
