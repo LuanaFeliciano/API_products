@@ -9,11 +9,11 @@ API CRUD de produtos desenvolvida com o micro framework Lumen
 
 
 ## 💻 Endpoints
-- GET /produto retornará todos os produtos.
+- GET /produtos retornará todos os produtos.
 - GET /produto/{id} retornará um registro de produto fazendo referência a seu id.
-- POST /produto criará um novo registro de produto.
-- PUT /produto/{id} atualizará um registro existente de produto.
-- DELETE /produto/{id} excluirá um registro de produto fazendo referência a seu id.
+- POST /produto/cadastrar = criará um novo registro de produto.
+- PUT /produto/{id}/atualizar = atualizará um registro existente de produto.
+- DELETE /produto/{id}/deletar = excluirá um registro de produto fazendo referência a seu id.
 
 ## Bibliotecas ou Pacotes utilizados:
 - https://github.com/flipboxstudio/lumen-generator - Para usar comandos geradores como no Laravel
